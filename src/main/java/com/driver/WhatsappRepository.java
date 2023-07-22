@@ -156,7 +156,7 @@ public class WhatsappRepository {
 
     public int removeUser(User user) {
         // from the group.
-        return 0;
+        return 9;
     }
 
     public String findMessage(Date start, Date end, int k) {
