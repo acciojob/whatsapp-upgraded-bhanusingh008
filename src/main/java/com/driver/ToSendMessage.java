@@ -1,14 +1,22 @@
 package com.driver;
 
-public class toSendMessage {
+import java.util.Date;
+
+public class ToSendMessage {
     private Message message;
     private User sender;
     private Group group;
 
-    public toSendMessage(Message message, User user, Group group) {
+    private Date date;
+
+    public ToSendMessage() {
+    }
+
+    public ToSendMessage(Message message, User user, Group group) {
         this.message = message;
         this.sender = user;
         this.group = group;
+        this.date=new Date();
 
 //        System.out.println(message.getContent()+" "+user.getMobile()+" "+group.getName());
     }
@@ -35,5 +43,9 @@ public class toSendMessage {
 
     public void setGroup(Group group) {
         this.group = group;
+    }
+
+    public Date getDate() {
+        return date;
     }
 }
