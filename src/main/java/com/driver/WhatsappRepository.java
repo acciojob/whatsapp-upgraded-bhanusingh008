@@ -35,7 +35,7 @@ public class WhatsappRepository {
         if(userMap.containsKey(user.getMobile())){
             throw new RuntimeException("User already exists");
         }
-        userMap.put(user.getMobile(), user);
+        userMap.put(user.getName(), user);
 //        System.out.println(userMap.get(user.getMobile()));
         return "SUCCESS";
     }
@@ -82,7 +82,7 @@ public class WhatsappRepository {
 
     public int sendMessage(Message message, User sender, Group group) {
 
-        if(!userMap.containsKey(sender.getMobile())){
+        if(!userMap.containsKey(sender.getName())){
             throw new RuntimeException("User does not exist");
         }
 
@@ -133,7 +133,7 @@ public class WhatsappRepository {
         }
 
         if(!userGroupMap.containsKey(user.getName())){
-           throw new RuntimeException("User does not belong to any group");
+           throw new RuntimeException("Group does not exist");
         }
 
         if(adminMap.containsKey(user.getName())){
