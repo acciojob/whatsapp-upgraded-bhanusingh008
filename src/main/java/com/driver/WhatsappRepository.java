@@ -82,9 +82,9 @@ public class WhatsappRepository {
 
     public int sendMessage(Message message, User sender, Group group) {
 
-        if(!userMap.containsKey(sender.getName())){
-            throw new RuntimeException("User does not exist");
-        }
+//        if(!userMap.containsKey(sender.getName())){
+//            throw new RuntimeException("User does not exist");
+//        }
 
         if(!groupName.containsKey(group.getName())){
             throw new RuntimeException("Group does not exist");
